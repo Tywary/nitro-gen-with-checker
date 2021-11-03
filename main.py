@@ -38,9 +38,9 @@ print(Fore.BLUE + """
                                                  /       /             /
 """)
 time.sleep(0.1)
-print("For Help and Support Contact qazadi#7228")
+print(Fore.GREEN + "For Help and Support Contact qazadi#7228")
 time.sleep(0.1)
-print("Source Code: https://github.com/Tywary/nitro-gen-with-checker ")
+print(Fore.GREEN + "Source Code: https://github.com/Tywary/nitro-gen-with-checker ")
 time.sleep(0.1)
 
 num = int(input('Type the number of Codes to Generate and Check: '))
@@ -66,11 +66,12 @@ with open("Nitro Codes.txt") as file:
         url = "https://discordapp.com/api/v6/entitlements/gift-codes/" + nitro + "?with_application=false&with_subscription_plan=true"
         r = requests.get(url)
         if r.status_code == 200:
-            print(Back.RED + f"√ Valid | {nitro} ")
+            print(Fore.GREEN + f"√ Valid | {nitro} ")
             break
         else:
-            print(Back.GREEN + f"⨉ Invalid | {nitro} ")
+            print(Fore.RED + f"X Invalid | {nitro} ")
 
 time.sleep(0.2)
 
 input(f"\nYou have generated {num} Nitro Codes, Now press any key to close this, you'll get valid codes in Valid Codes.txt if you see its empty then you are too unlucky :(  ")
+input(Fore.Blue + f"Join my Discord Server for fun. hehe - https://discord.gg/xJ8Ft8HVuv ")
